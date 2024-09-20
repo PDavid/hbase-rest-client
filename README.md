@@ -12,8 +12,9 @@ The application requests the following representations:
 
 Make sure HBase rest server is running. Localhost and port 8080 is assumed.
 
-Set the following JVM option:
-`--add-opens java.base/java.lang=ALL-UNNAMED` (required for JAXB unmarshalling)
-
 Then run the application:
 `./gradlew run`
+
+# Note
+
+The JVM option: `--add-opens java.base/java.lang=ALL-UNNAMED` is required for JAXB unmarshalling.

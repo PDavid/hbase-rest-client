@@ -27,3 +27,7 @@ test {
 application {
     mainClass = 'hu.paksyd.hbase.restclient.Main'
 }
+
+tasks.named('run', JavaExec) {
+    jvmArgs("--add-opens", "java.base/java.lang=ALL-UNNAMED")
+}
