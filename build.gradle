@@ -1,7 +1,6 @@
 plugins {
     id 'java'
     id 'application'
-    //id("com.google.protobuf") version "0.9.4"
 }
 
 group = 'hu.paksyd'
@@ -14,7 +13,6 @@ repositories {
 
 dependencies {
     implementation 'org.apache.httpcomponents.client5:httpclient5:5.2.3'
-    //implementation 'com.google.protobuf:protobuf-java:4.27.3'
     implementation 'org.apache.hbase:hbase-rest:4.0.0-alpha-2-SNAPSHOT'
     //implementation 'org.apache.hbase:hbase-rest:2.5.9'
 
@@ -29,31 +27,3 @@ test {
 application {
     mainClass = 'hu.paksyd.hbase.restclient.Main'
 }
-
-/*sourceSets {
-    main {
-        proto {
-            // srcDir 'src/main/proto'
-        }
-        java {
-            srcDir 'src/main/java'
-        }
-    }
-}
-
-protobuf {
-    generateProtoTasks.generatedFilesBaseDir = 'build/generated-sources'
-
-    generateProtoTasks {
-        // all() returns the collection of all protoc tasks
-        all().each { task ->
-            // Here you can configure the task
-        }
-
-        // In addition to all(), you may get the task collection by various
-        // criteria:
-
-        // (Java only) returns tasks for a sourceSet
-        ofSourceSet('main')
-    }
-}*/
